@@ -9,7 +9,7 @@ var OptionsCollection = Backbone.Collection.extend({
 	},
 	
 	getData: function () {
-		var en = [], de = [], value;
+		var en = [], de = [];
 		this.each(function (model) {
 			en.push(model.getData('en'));
 			de.push(model.getData('de'));
