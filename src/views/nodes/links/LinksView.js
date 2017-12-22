@@ -5,6 +5,8 @@ var LinksView = Marionette.CompositeView.extend({
 	
 	id: 'key-values-view',
 	
+	className: 'node-container',
+	
 	template: template,
 
 	childViewContainer: '#links-region',

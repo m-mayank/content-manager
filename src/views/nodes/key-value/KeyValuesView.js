@@ -5,6 +5,8 @@ var KeyValuesView = Marionette.CompositeView.extend({
 	
 	id: 'key-values-view',
 	
+	className: 'node-container',
+	
 	template: template,
 
 	childViewContainer: '#key-values-region',
