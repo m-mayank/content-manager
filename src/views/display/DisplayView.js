@@ -23,9 +23,9 @@ var CreateView = Marionette.ItemView.extend({
 		};
 		return JSON.stringify(data).replace(/({|}[,]*|[^{}:]+:[^{}:,]*[,{]*)/g, function (m, p1) {
 		    var rtnFn = function() {
-		            return '<div style="text-indent: ' + (f['brace'] * 20) + 'px;">' + p1 + '</div>';
-		        },
-		        rtnStr = 0;
+		    		return '<div style="text-indent: ' + (f['brace'] * 20) + 'px;">' + p1 + '</div>';
+		    },
+		    rtnStr = 0;
 		    if (p1.lastIndexOf('{') === (p1.length - 1)) {
 		        rtnStr = rtnFn();
 		        f['brace'] += 1;
