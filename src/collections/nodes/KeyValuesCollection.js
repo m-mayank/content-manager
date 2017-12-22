@@ -12,13 +12,13 @@ var KeyValuesCollection = Backbone.Collection.extend({
 		var en = {}, de = {}, key;
 		this.each(function (model) {
 			key = model.get('key');
-			en[key] = model.get('value');
-			de[key] = model.get('valueDE');
-		})
+			en[key] = model.get('enValue');
+			de[key] = model.get('deValue');
+		});
 		return {
 			en: en,
 			de: de
-		}
+		};
 	}
 	
 });

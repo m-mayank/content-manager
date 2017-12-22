@@ -1,8 +1,8 @@
-import template from 'templates/nodes/key-value/KeyValueTmpl.hbs';
+import template from 'templates/nodes/dropdowns/OptionTmpl.hbs';
 
-var KeyValueView = Marionette.ItemView.extend({
+var OptionView = Marionette.ItemView.extend({
 	
-	id: 'key-value-view',
+	id: 'option-view',
 	
 	template: template,
 	
@@ -15,9 +15,9 @@ var KeyValueView = Marionette.ItemView.extend({
 	},
 	
 	bindings: {
-		'#input-key': 'key',
-		'#input-value-en': 'enValue',
-		'#input-value-de': 'deValue'
+		'#input-value': 'value',
+		'#input-label-en': 'enLabel',
+		'#input-label-de': 'deLabel'
 	},
 	
 	onRender: function () {
@@ -34,4 +34,4 @@ var KeyValueView = Marionette.ItemView.extend({
 	
 });
 
-export {KeyValueView as default};
+export {OptionView as default};

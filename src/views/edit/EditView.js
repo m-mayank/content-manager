@@ -2,6 +2,7 @@ import template from 'templates/edit/EditTmpl.hbs';
 import appVent from 'appVent';
 import appConstants from 'appConstants';
 import KeyValuesView from 'views/nodes/key-value/KeyValuesView';
+import DropdownsView from 'views/nodes/dropdowns/DropdownsView';
 
 var EditView = Marionette.LayoutView.extend({
 	
@@ -30,6 +31,7 @@ var EditView = Marionette.LayoutView.extend({
 	
 	onShow: function () {
 		this.renderStaticLabels();
+		this.renderDropdownsView();
 		this.renderErrorMessages();
 	},
 	
@@ -42,6 +44,14 @@ var EditView = Marionette.LayoutView.extend({
 			this.staticLabelsRegion.show(new KeyValuesView({
 				collection: this.model.get('staticLabels'),
 				header: 'Static Labels'
+			}));
+		}
+	},
+	
+	renderDropdownsView: function () {
+		if (this.model.get('isDropdowns')) {
+			this.dropdownsRegion.show(new DropdownsView({
+				collection: this.model.get('dropdowns')
 			}));
 		}
 	},
