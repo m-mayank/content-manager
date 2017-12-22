@@ -9,10 +9,14 @@ var KeyValueView = Marionette.ItemView.extend({
 	template: template,
 	
 	ui: {
+		richTextContainer: '#rich-text-container',
+		plainTextContainer: '#plain-text-container',
+		anchorToggle: '#anchor-toggle',
 		anchorRemove: '#anchor-remove'
 	},
 	
 	events: {
+		'click @ui.anchorToggle': 'anchorToggleClicked',
 		'click @ui.anchorRemove': 'anchorRemoveClicked'
 	},
 	
@@ -24,6 +28,11 @@ var KeyValueView = Marionette.ItemView.extend({
 	
 	onRender: function () {
 		this.stickit();
+	},
+	
+	anchorToggleClicked: function () {
+		this.ui.plainTextContainer.toggleClass('hide');
+		this.ui.richTextContainer.toggleClass('hide');
 	},
 	
 	anchorRemoveClicked: function () {

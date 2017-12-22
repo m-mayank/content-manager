@@ -3,16 +3,33 @@
 		<input id="input-key" type="text" name="key" placeholder="Key">
 	</div>
 	<div class="columns large-6">
-		 <a href="javascript:void(0)" id="anchor-remove">(X)</a>
+		<a href="javascript:void(0)" id="anchor-toggle">(*)</a> &nbsp;&nbsp; <a
+			href="javascript:void(0)" id="anchor-remove">(X)</a>
 	</div>
 </div>
-<div class="row">
-	<div class="columns large-12">
-		<input id="input-value-en" type="text" name="enValue" placeholder="English value">
+<div id="plain-text-container">
+	<div class="row">
+		<div class="columns large-12">
+			<input id="input-value-en" type="text" name="enValue"
+				placeholder="English value">
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns large-12">
+			<input id="input-value-de" type="text" name="deValue"
+				placeholder="German value">
+		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="columns large-12">
-		<input id="input-value-de" type="text" name="deValue" placeholder="German value">
+<div id="rich-text-container" class="hide">
+	<div class="row">
+		<div class="columns large-12">
+			<textarea id="input-value-en" name="enValue" placeholder="English value" rows="4" cols=""></textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns large-12">
+			<textarea id="input-value-de" name="deValue" placeholder="German value" rows="4" cols=""></textarea>
+		</div>
 	</div>
 </div>
