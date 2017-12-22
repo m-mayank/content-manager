@@ -5,6 +5,8 @@ var DropdownView = Marionette.CompositeView.extend({
 	
 	id: 'dropdown-view',
 	
+	className: 'sub-node-container',
+	
 	template: template,
 
 	childViewContainer: '#option-region',

@@ -4,6 +4,8 @@ var OptionView = Marionette.ItemView.extend({
 	
 	id: 'option-view',
 	
+	className: 'sub-sub-node-container',
+	
 	template: template,
 	
 	ui: {

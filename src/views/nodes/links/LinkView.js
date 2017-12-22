@@ -3,6 +3,8 @@ import template from 'templates/nodes/links/LinkTmpl.hbs';
 var LinkView = Marionette.ItemView.extend({
 	
 	id: 'link-view',
+
+	className: 'sub-node-container',
 	
 	template: template,
 	

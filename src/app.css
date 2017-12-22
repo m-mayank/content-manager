@@ -6,17 +6,25 @@
 	background-color: yellow;
 }
 
-.json-viewer-header {
-  border: 2px dashed #666;
-  margin: 20px;
-  padding: 10px;
-  font-family: "Arial";
+.node-container {
+	border: 1px solid #666;
+	padding: 10px;
+}
+
+.sub-node-container {
+	border: 1px dashed #666;
+	padding: 10px;
+}
+
+.sub-sub-node-container {
+	border: 1px dotted #666;
+	padding: 10px;
 }
 
 .json-viewer {
-  border: 2px dashed #666;
-  margin: 20px;
-  padding: 10px;
-  font-family: "Arial";
-  background-color: lightgreen;
+	border: 2px dashed #666;
+	margin: 20px;
+	padding: 10px;
+	font-family: "Arial";
+	background-color: lightgreen;
 }

@@ -18,7 +18,7 @@ var HomeView = Marionette.LayoutView.extend({
 	},
 	
 	anchorClicked: function () {
-		var fileName = 'sample', _this = this;
+		var fileName = 'wealth', _this = this;
 		this.fetchAllData(fileName).done(function(enResp, deResp) {
 			_this.model.setData({
 				en: enResp[0],

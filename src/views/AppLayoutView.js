@@ -12,6 +12,14 @@ var AppLayoutView = Marionette.LayoutView.extend({
 	id: 'app-layout-view',
 	
 	template: template,
+
+	ui: {
+		'logo': '#h1-logo'
+	},
+	
+	events: {
+		'click @ui.logo': 'logoClicked'
+	},
 	
 	regions: {
 		'layoutRegion': '#layout-region'
@@ -27,6 +35,10 @@ var AppLayoutView = Marionette.LayoutView.extend({
 		this.listenTo(appVent, appConstants.EVENT_SHOW_CREATE, this.renderCreateView, this);
 		this.listenTo(appVent, appConstants.EVENT_SHOW_EDIT, this.renderEditView, this);
 		this.listenTo(appVent, appConstants.EVENT_SHOW_DISPLAY, this.renderDisplayView, this);
+	},
+	
+	logoClicked: function () {
+		appVent.trigger(appConstants.EVENT_REDIRECT_TO_HOME);
 	},
 	
 	renderHomeView: function () {

@@ -31,6 +31,10 @@ var EditView = Marionette.LayoutView.extend({
 	},
 	
 	onShow: function () {
+		window.scrollTo(0,0)
+	},
+	
+	onShow: function () {
 		this.renderStaticLabels();
 		this.renderLinksView();
 		this.renderDropdownsView();

@@ -17,6 +17,10 @@ var CreateView = Marionette.ItemView.extend({
 		this.ui.deContainer.html(this.formatJSON(data.de));
 	},
 	
+	onShow: function () {
+		window.scrollTo(0,0)
+	},
+	
 	formatJSON: function (data) {
 		var f = {
 			brace: 0

@@ -5,10 +5,10 @@ import DropdownsCollection from 'collections/nodes/DropdownsCollection';
 var Model = Backbone.Model.extend({
 
 	defaults: {
-		isStaticLabels: true,
-		isLinks: true,
-		isDropdowns: true,
-		isErrorMessages: true
+		isStaticLabels: false,
+		isLinks: false,
+		isDropdowns: false,
+		isErrorMessages: false
 	},
 	
 	initialize: function () {

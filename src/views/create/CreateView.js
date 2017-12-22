@@ -28,6 +28,10 @@ var CreateView = Marionette.ItemView.extend({
 		this.stickit();
 	},
 	
+	onShow: function () {
+		window.scrollTo(0,0)
+	},
+	
 	createClicked: function () {
 		appVent.trigger(appConstants.EVENT_REDIRECT_TO_EDIT);
 	},

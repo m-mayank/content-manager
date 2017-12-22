@@ -1,6 +1,7 @@
 import config from './app-config';
 import bootstrap from 'foundation-sites/dist/css/foundation.min.css';
 import css from './app.css';
+import appConstants from './appConstants';
 import appVent from './appVent';
 import AppRouter from './AppRouter';
 import AppLayoutView from './views/AppLayoutView';
@@ -8,7 +9,12 @@ import AppLayoutView from './views/AppLayoutView';
 var App = Marionette.Application.extend({
 	
 	initialize: function () {
+		this.subscribeToAppVent();
 		this.addRegion();
+	},
+	
+	subscribeToAppVent: function () {
+		this.listenTo(appVent, appConstants.EVENT_REDIRECT_TO_HOME, this.showView, this);
 	},
 	
 	onStart: function () {

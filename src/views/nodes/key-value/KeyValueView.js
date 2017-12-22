@@ -4,6 +4,8 @@ var KeyValueView = Marionette.ItemView.extend({
 	
 	id: 'key-value-view',
 	
+	className: 'sub-node-container',
+	
 	template: template,
 	
 	ui: {
