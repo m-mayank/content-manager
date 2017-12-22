@@ -1,0 +1,22 @@
+.app-container {
+	padding: 2%
+}
+
+.color-yellow {
+	background-color: yellow;
+}
+
+.json-viewer-header {
+  border: 2px dashed #666;
+  margin: 20px;
+  padding: 10px;
+  font-family: "Arial";
+}
+
+.json-viewer {
+  border: 2px dashed #666;
+  margin: 20px;
+  padding: 10px;
+  font-family: "Arial";
+  background-color: lightgreen;
+}
