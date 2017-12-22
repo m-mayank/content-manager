@@ -1,0 +1,24 @@
+{
+  "advice": {
+    "staticLabels": {
+      "header": "Willkommen im Beratungsmanagement",
+      "subHeader": "Das ist ein Sub-Headet"
+    },
+    "links": {
+      "home": {
+        "text": " Zur Startseite",
+        "url": "www.wealth.fidelity.de"
+      },
+      "openAccount": {
+        "text": "Gehe zur Kontoeröffnung",
+        "url": "www.wealth.fidelity.de/open-account"
+      }
+    },
+    "dropdowns": {
+      
+    },
+    "errorMessages": {
+      
+    }
+  }
+}

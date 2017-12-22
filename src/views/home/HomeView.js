@@ -9,7 +9,7 @@ var HomeView = Marionette.LayoutView.extend({
 	template: template,
 	
 	events: {
-		'click #anchor-sample': 'anchorClicked',
+		'click .anchor-open': 'anchorClicked',
 		'click #btn-create': 'createClicked'
 	},
 	
@@ -17,8 +17,8 @@ var HomeView = Marionette.LayoutView.extend({
 		appVent.trigger(appConstants.EVENT_REDIRECT_TO_CREATE);
 	},
 	
-	anchorClicked: function () {
-		var fileName = 'wealth', _this = this;
+	anchorClicked: function (event) {
+		var fileName = event.target.getAttribute('data-name'), _this = this;
 		this.fetchAllData(fileName).done(function(enResp, deResp) {
 			_this.model.setData({
 				en: enResp[0],
@@ -29,8 +29,8 @@ var HomeView = Marionette.LayoutView.extend({
 	},
 	
 	fetchAllData: function (fileName) {
-		var enURL = '/data/' + fileName + '-en.json';
-		var deURL = '/data/' + fileName + '-de.json';
+		var enURL = '/data/' + fileName + '/' + fileName + '-en.json';
+		var deURL = '/data/' + fileName + '/' + fileName + '-de.json';
 		var d1 = this.fetchData(enURL);
 		var d2 = this.fetchData(deURL);
 		return $.when(d1, d2);

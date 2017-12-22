@@ -1,0 +1,24 @@
+{
+  "advice": {
+    "staticLabels": {
+      "header": "Welcome to Advice Management",
+      "subHeader": "this is a sub header"
+    },
+    "links": {
+      "home": {
+        "text": "Go to Home",
+        "url": "www.wealth.fidelity.de"
+      },
+      "openAccount": {
+        "text": "Go to Account Opening",
+        "url": "www.wealth.fidelity.de/open-account"
+      }
+    },
+    "dropdowns": {
+      
+    },
+    "errorMessages": {
+      
+    }
+  }
+}
