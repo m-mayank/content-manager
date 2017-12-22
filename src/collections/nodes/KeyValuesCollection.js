@@ -8,6 +8,18 @@ var KeyValuesCollection = Backbone.Collection.extend({
 		this.add(new KeyValueModel());
 	},
 	
+	setData: function (data) {
+		var keyValues = [], keys = _.allKeys(data.en);
+		_.each(keys, function (key) {
+			keyValues.push({
+				key: key,
+				enValue: data.en[key],
+				deValue: data.de[key]
+			})
+		});
+		this.reset(keyValues);
+	},
+	
 	getData: function () {
 		var en = {}, de = {}, key;
 		this.each(function (model) {

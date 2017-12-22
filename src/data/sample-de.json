@@ -1,0 +1,39 @@
+{
+  "sample": {
+    "staticLabels": {
+      "header": " Willkommen bei Wealth Management"
+    },
+    "links": {
+      "home": {
+        "text": "Startseite",
+        "url": "www.wealth.fidelity.de"
+      }
+    },
+    "dropdowns": {
+      "country": [
+        {
+          "label": "Deutschland",
+          "value": "DE"
+        },
+        {
+          "label": "Großbritannien",
+          "value": "GB"
+        }
+      ],
+      "titles": [
+        {
+          "label": "Herr.",
+          "value": "MR"
+        },
+        {
+          "label": " Frau.",
+          "value": "MRS"
+        }
+      ]
+    },
+    "errorMessages": {
+      "titleMandatory": "Bitte geben Sie den Titel an",
+      "invalidDOB": "Bitte geben Sie das korrekte Geburtsdatum ein"
+    }
+  }
+}

@@ -70,9 +70,9 @@ module.exports = function(env) {
 		}), new HTMLWebpackPlugin({
 			template : './src/app.html'
 		}), new CopyWebpackPlugin([ {
-			context : 'vendor/',
-			from : '**/*',
-			to : path.resolve(__dirname, 'dist/vendor')
+			context : 'src/data/',
+			from : '**/*.*',
+			to : path.resolve(__dirname, 'dist/data')
 		} ]), new UglifyJSPlugin({
 			sourceMap : true
 		}) ]

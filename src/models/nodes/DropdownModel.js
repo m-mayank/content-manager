@@ -4,12 +4,15 @@ var DropdownModel = Backbone.Model.extend({
 	
 	idAttribute: 'key',
 	
-	initialize: function () {
-		this.initOptions();
+	initialize: function (options) {
+		options = options || {};
+		this.initOptions(options.options);
 	},
 	
-	initOptions: function () {
+	initOptions: function (options) {
+		options = options || {};
 		this.set('options', new OptionsCollection());
+		this.get('options').setData(options);
 	}
 });
 

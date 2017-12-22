@@ -9,11 +9,37 @@ var HomeView = Marionette.LayoutView.extend({
 	template: template,
 	
 	events: {
+		'click #anchor-sample': 'anchorClicked',
 		'click #btn-create': 'createClicked'
 	},
 	
 	createClicked: function () {
 		appVent.trigger(appConstants.EVENT_REDIRECT_TO_CREATE);
+	},
+	
+	anchorClicked: function () {
+		var fileName = 'sample', _this = this;
+		this.fetchAllData(fileName).done(function(enResp, deResp) {
+			_this.model.setData({
+				en: enResp[0],
+				de: deResp[0]
+			});
+			appVent.trigger(appConstants.EVENT_REDIRECT_TO_EDIT);
+		});
+	},
+	
+	fetchAllData: function (fileName) {
+		var enURL = '/data/' + fileName + '-en.json';
+		var deURL = '/data/' + fileName + '-de.json';
+		var d1 = this.fetchData(enURL);
+		var d2 = this.fetchData(deURL);
+		return $.when(d1, d2);
+	},
+	
+	fetchData: function (url) {
+		var model = new Backbone.Model({});
+		model.url = url;
+		return model.fetch();
 	}
 	
 });

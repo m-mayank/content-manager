@@ -30,7 +30,9 @@ var AppLayoutView = Marionette.LayoutView.extend({
 	},
 	
 	renderHomeView: function () {
-		this.layoutRegion.show(new HomeView());
+		this.layoutRegion.show(new HomeView({
+			model: this.model
+		}));
 	},
 	
 	renderCreateView: function () {

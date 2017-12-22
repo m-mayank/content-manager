@@ -17,7 +17,7 @@ var CreateView = Marionette.ItemView.extend({
 	},
 	
 	bindings: {
-		'#input-component-name': 'componentName',
+		'#input-name': 'name',
 		'#cb-static-labels': 'isStaticLabels',
 		'#cb-links': 'isLinks',
 		'#cb-dropdowns': 'isDropdowns',
