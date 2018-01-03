@@ -2,6 +2,18 @@
 	padding: 2%
 }
 
+.logo {
+	display: block;
+	height: 60px;
+	width: 195px;
+	background: url('/images/logo.png') center center no-repeat;
+}
+
+.headerbar {
+	overflow: hidden;
+	position: fixed;
+}
+
 .color-yellow {
 	background-color: yellow;
 }

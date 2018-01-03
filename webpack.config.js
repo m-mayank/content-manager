@@ -35,7 +35,7 @@ module.exports = function(env) {
 		entry : {
 			app : "./src/app.js",
 			vendor : Object.keys(pkg.dependencies).filter(function(key) {
-				return key !== 'handlebars'
+				return (key !== 'handlebars')
 			})
 		},
 		output : {
@@ -73,6 +73,14 @@ module.exports = function(env) {
 			context : 'src/data/',
 			from : '**/*.*',
 			to : path.resolve(__dirname, 'dist/data')
+		}, {
+			context : 'src/images/',
+			from : '**/*.*',
+			to : path.resolve(__dirname, 'dist/images')
+		}, {
+			context : 'vendor/',
+			from : '**/*.*',
+			to : path.resolve(__dirname, 'dist/vendor')
 		} ]), new UglifyJSPlugin({
 			sourceMap : true
 		}) ]
